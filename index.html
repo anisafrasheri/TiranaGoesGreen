@@ -6,80 +6,96 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
   <link rel="stylesheet" href="home.css"/>
-   
+
 </head>
 <body>
 
-  <nav>
-    <input type="checkbox" id="check">
-    <label for="check" class="checkbtn">
-      <i class="fas fa-bars"></i>
-    </label>
-    <label class="logo">TiranaGoesGreen</label>
-    <ul>
-      <li><a class="active" href="index.html">Home</a></li>
-      <li><a  href="checkout.html">Contribute Now</a></li>
-      <li><a href="aboutus.html">About</a></li>
-      <li><a href="needtoknow.html">Learn more</a></li>
-      <li><a href="needtodo.html">Do something</a></li>
-      <!-- <li><a href="#">Contact</a></li> -->
-    </ul>
-  </nav>
+<nav>
+  <input type="checkbox" id="check">
+  <label for="check" class="checkbtn">
+    <i class="fas fa-bars"></i>
+  </label>
+  <label class="logo">TiranaGoesGreen</label>
+  <ul>
+    <li><a class="active" href="index.html">Home</a></li>
+    <li><a  href="checkout.html">Contribute Now</a></li>
+    <li><a href="aboutus.html">About</a></li>
+    <li><a href="needtoknow.html">Learn more</a></li>
+    <li><a href="needtodo.html">Do something</a></li>
+    <!-- <li><a href="#">Contact</a></li> -->
+  </ul>
+</nav>
 
-  
-  <!-- Environment Section -->
-  <section class="environment-section">
-    <h2>How We Can Help the Environment</h2>
-    <p>Deforestation is one of the greatest challenges our planet faces. We can make a difference through education, awareness, and action. Here are some ways you can help:</p>
-    <div class="help-list">
-      <div>
-        <h3>Plant Trees</h3>
-        <p>Every tree planted helps reduce the negative effects of deforestation. Join a local tree-planting campaign or start one in your community.</p>
-      </div>
-      <div>
-        <h3>Reduce Paper Usage</h3>
-        <p>Limiting paper waste by switching to digital alternatives can significantly reduce the demand for logging. Try to go paperless whenever possible.</p>
-      </div>
-      <div>
-        <h3>Support Sustainable Practices</h3>
-        <p>Purchase products from companies that commit to sustainable sourcing and production practices to protect our forests.</p>
-      </div>
+
+<!-- Environment Section -->
+
+<style>
+
+  .message-section h1 {
+    color: black; /* Adjust text color for contrast against the image */
+    font-size: 3em; /* Adjust font size as needed */
+    font-weight: bolder;
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically (if needed) */
+    height: 70vh; /* Optional: Makes the section take full viewport height */
+    position: relative;
+  }
+</style>
+
+<section class="message-section">
+  <img src="img/Home-Banner_2048x2048.webp" alt="Banner Image">
+  <h1>Get involved, make an impact, and watch the world around you FLOURISH. <br> Because every TREE planted is a gift to our planet.</h1>
+</section>
+
+
+
+<!-- Image Grid Section -->
+<div class="image-grid">
+  <!-- Large left image -->
+  <div class="large-image">
+    <img src="./img/tirana.webp" id="large-image" alt="Image 1">
+  </div>
+  <!-- Top right image -->
+  <div class="image-cell">
+    <img src="./img/forest1.webp" alt="Image 2">
+  </div>
+  <!-- Bottom right image -->
+  <div class="image-cell">
+    <img src="./img/forest2.jpg" alt="Image 3">
+  </div>
+</div>
+<section class="environment-section">
+  <h2>How We Can Help the Environment</h2>
+  <p>Deforestation is one of the greatest challenges our planet faces. We can make a difference through education, awareness, and action. Here are some ways you can help:</p>
+  <div class="help-list">
+    <div>
+      <h3>Plant Trees</h3>
+      <p>Every tree planted helps reduce the negative effects of deforestation. Join a local tree-planting campaign or start one in your community.</p>
     </div>
-  </section>
-
-
-  <section class="message-section">
-    <h2>Get involved, make an impact, and watch the world around you <span style="color: rgb(116, 188, 9);">FLOURISH</span>. Because every <span style="color: rgb(116, 188, 9);">TREE</span> planted is a gift to our planet.</h2>
-  </section>
-
-  <!-- Image Grid Section -->
-  <div class="image-grid">
-    <!-- Large left image -->
-    <div class="large-image">
-      <img src="./img/tirana.webp" id="large-image" alt="Image 1">
+    <div>
+      <h3>Reduce Paper Usage</h3>
+      <p>Limiting paper waste by switching to digital alternatives can significantly reduce the demand for logging. Try to go paperless whenever possible.</p>
     </div>
-    <!-- Top right image -->
-    <div class="image-cell">
-      <img src="./img/forest1.webp" alt="Image 2">
-    </div>
-    <!-- Bottom right image -->
-    <div class="image-cell">
-      <img src="./img/forest2.jpg" alt="Image 3">
+    <div>
+      <h3>Support Sustainable Practices</h3>
+      <p>Purchase products from companies that commit to sustainable sourcing and production practices to protect our forests.</p>
     </div>
   </div>
+</section>
 
-  <!-- Plant a Tree Button -->
-  <a href="checkout.html" class="plant-tree-btn">
-    <i class="fas fa-tree"></i> Plant a Tree Now <i class="fas fa-tree"></i>
-  </a>
-
-
- 
+<!-- Plant a Tree Button -->
+<a href="checkout.html" class="plant-tree-btn">
+  <i class="fas fa-tree"></i> Plant a Tree Now <i class="fas fa-tree"></i>
+</a>
 
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 TiranaGoGreen. All Rights Reserved.</p>
-  </footer>
+
+
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2024 TiranaGoGreen. All Rights Reserved.</p>
+</footer>
 </body>
 </html>
