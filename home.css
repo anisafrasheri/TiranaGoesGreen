@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700|Roboto:300,400,500,700,900&amp;display=swap");
+
 * {
     padding: 0;
     margin: 0;
@@ -6,7 +8,7 @@
     box-sizing: border-box;
 }
 body {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 nav {
     background: #4bb83a;
@@ -210,7 +212,7 @@ footer p {
     font-size: 14px;
 }
 .message-section img{
-    opacity: 70%;
+    opacity: 100%;
     width:inherit;
     position: absolute;
     left: 0;
