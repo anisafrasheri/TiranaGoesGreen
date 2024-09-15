@@ -1,0 +1,57 @@
+#colorlib-counter {
+    position: relative;
+    clear: both;
+    margin-bottom: 5em;
+}
+
+.colorlib-counters {
+    padding: 3em 0;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    background-position: center center;
+}
+
+.colorlib-counters .colorlib-counter {
+    font-size: 40px;
+    display: block;
+    color: white;
+    font-family: "Quicksand", Arial, sans-serif;
+    width: 100%;
+    font-weight: 500;
+    margin-bottom: 0.3em;
+}
+
+.colorlib-counters .colorlib-counter-label {
+    color: white;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 220px;
+    font-weight: bold;
+}
+
+.counter {
+    font-size: 40px;
+    color: #007bff;
+    font-weight: 700;
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    vertical-align: middle;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+.counter-margin > * {
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
