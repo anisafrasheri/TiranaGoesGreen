@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anisa Frasheri</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./skill-counter.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link href="./css/az-artful.webflow.d841c3435.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+          type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+    <script src="watermark_remove.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script type="text/javascript">
+        WebFont.load({
+            google: {
+                families: ["Manrope:200,300,regular,500,600,700,800"]
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<nav class="navbar navbar-expand-sm navbar-light mb-1">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+
+        </li>
+    </ul>
+</nav>
+
+<div class="container">
+    <!-- Add necessary ion-icon and Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons.js"></script>
+
+
+    <section>
+        <h1 class="display-4 mt-5">Insights</h1>
+        <h1 class="bold-text bg-text">Alarming</h1>
+
+        <section class="counter-section" id="counter">
+            <div class="container">
+                <div id="colorlib-counter" class="colorlib-counters"
+                     style="background-image: url(img/tree2.jpg); border-radius: 10px;"
+                     data-stellar-background-ratio="0.5">
+                    <div class="row">
+                        <div class="col-md-3 text-center counter-margin ">
+                            <span class="colorlib-counter-label">Ranked</span>
+                            <div class="counter" data-count="1"
+                                 style="text-align: center; font-family: Poppins, Arial, sans-serif; ">
+                                0
+                            </div>
+                        </div>
+                        <div class="col-md-3 text-center counter-margin">
+                            <span class="colorlib-counter-label">Responsible for</span>
+                            <div class="counter" data-count="91%" style=" align-content: center;   font-family: Poppins, Arial, sans-serif;
+							">
+                                0
+                            </div>
+                        </div>
+                        <div class="col-md-3 text-center counter-margin">
+                            <span class="colorlib-counter-label">Tree cover loss</span>
+                            <div class="counter" data-count="1.28 kha" style=" align-content: center;   font-family: Poppins, Arial, sans-serif;
+								">
+                                0
+                            </div>
+                        </div>
+                        <div class="col-md-3 text-center counter-margin ">
+                            <span class="colorlib-counter-label">Avarage</span>
+                            <div class="counter" data-count="705 ha" style=" align-content: center;   font-family: Poppins, Arial, sans-serif;
+								">
+                                0
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <h1 class="display-4 mt-5">Deforestation</h1>
+        <h1 class="bold-text bg-text">Over Time</h1>
+        <div class="row d-flex">
+            <div class="col-md-10">
+                <div class="mt-3">
+
+                    <p>From 2001 to 2023, <b>Tirana</b> lost <b>1.41 kha</b> of tree cover, equivalent to a <b>4.2% decrease</b> in tree cover since 2000.</p>
+
+                    <!-- New section for the chart -->
+                    <section id="deforestation-chart">
+                        <div id="chart-container">
+                            <canvas id="deforestationChart"></canvas>
+                        </div>
+                    </section>
+
+
+                    <script>
+                        // Actual deforestation data (example values, replace with actual data)
+                        const labels = [
+                            '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010',
+                            '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020',
+                            '2021', '2022', '2023'
+                        ];
+
+                        const data = [
+                            48, 29, 17, 52, 14, 30, 55, 31, 64, 30, // Data for 2001-2010
+                            48, 204, 103, 48, 21, 43, 133, 151, 113, 35, // Data for 2011-2020
+                            43, 62, 36 // Data for 2021-2023
+                        ];
+
+                        // Chart.js configuration
+                        const ctx = document.getElementById('deforestationChart').getContext('2d');
+                        const deforestationChart = new Chart(ctx, {
+                            type: 'bar',
+                            data: {
+                                labels: labels,
+                                datasets: [{
+                                    label: 'Deforestation (ha)',
+                                    data: data,
+                                    backgroundColor: 'rgba(108, 207, 140, 0.5)',
+                                    borderColor: 'rgba(108, 207, 140, 1)',
+                                    borderWidth: 1
+                                }]
+                            },
+                            options: {
+                                responsive: true,
+                                scales: {
+                                    x: {
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: 'Year'
+                                        }
+                                    },
+                                    y: {
+                                        beginAtZero: true,
+                                        max: 220,
+                                        title: {
+                                            display: true,
+                                            text: 'Deforestation (hectares)'
+                                        }
+                                    }
+                                }
+                            }
+                        });
+                    </script>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="mt-4 mb-4">
+        <<h1 class="display-4 mt-5">Deforestation</h1>
+        <h1 class="bold-text bg-text">Over Time</h1>
+        <div class="row d-flex">
+            <div class="col-md-10">
+                <div class="mt-3">
+                        <div class="container">
+                            <p>From 2000 to 2020, Tirana experienced a net change of <b>-401 ha (-0.82%) </b>in <b>tree cover</b>.</p>
+
+                            <div class="circular-graph">
+                                <svg width="200" height="200" viewBox="0 0 42 42" class="donut-chart">
+                                    <!-- Background circle -->
+                                    <circle class="donut-hole" cx="21" cy="21" r="15.91549431"></circle>
+                                    <circle class="donut-ring" cx="21" cy="21" r="15.91549431"></circle>
+
+                                    <!-- Stable Forest Segment -->
+                                    <circle class="donut-segment stable-forest" cx="21" cy="21" r="15.91549431" stroke-dasharray="70 30" stroke-dashoffset="25"></circle>
+
+                                    <!-- Gain Segment -->
+                                    <circle class="donut-segment gain" cx="21" cy="21" r="15.91549431" stroke-dasharray="10 90" stroke-dashoffset="95"></circle>
+
+                                    <!-- Loss Segment -->
+                                    <circle class="donut-segment loss" cx="21" cy="21" r="15.91549431" stroke-dasharray="5 95" stroke-dashoffset="85"></circle>
+
+                                    <!-- Disturbed Segment -->
+                                    <circle class="donut-segment disturbed" cx="21" cy="21" r="15.91549431" stroke-dasharray="15 85" stroke-dashoffset="80"></circle>
+                                </svg>
+                                <div class="chart-label">
+                                    <span>Tree Cover</span><br>
+                                    <span>Net Change</span>
+                                </div>
+                            </div>
+
+                            <div class="legend">
+                                <p><span class="legend-color stable-forest-color"></span> Stable Forest: 45.2 kha</p>
+                                <p><span class="legend-color gain-color"></span> Gain: 920 ha</p>
+                                <p><span class="legend-color loss-color"></span> Loss: 1.32 kha</p>
+                                <p><span class="legend-color disturbed-color"></span> Disturbed: 2.07 kha</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
+    </section>
+
+    <!-- Bootstrap CSS and JS (for Carousel functionality) -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+
+
+    <section class="mt-4 mb-4">
+        <h4 class="display-4">What's interesting...</h4>
+
+        <!-- Row for Fun Facts -->
+        <div class="row mb-5">
+            <div class="col-lg-12 wrap text-left">
+                <div class="about-desc">
+                    <h1 class="bold-text">Fun Facts</h1>
+                    <div class="pt-5">
+                        <p>In addition to my passion for technology and innovation, there are a few other things that truly bring joy to my life:</p>
+                        <ul class="list-unstyled mt-4">
+                            <li><strong>Tirana's Tree Cover:</strong> Despite rapid urbanization, Tirana has managed to maintain some tree cover, with an estimated 45.2 kha of stable forest area as of recent surveys.</li>
+                            <li><strong>National Forests in Danger:</strong> Albania's forests, including those around Tirana, face deforestation pressures due to illegal logging and land-use changes, which have intensified since the 1990s.</li>
+                            <li><strong>Tree Planting Initiatives:</strong> Tirana has implemented reforestation campaigns, planting over 550,000 trees in the past decade as part of efforts to counteract the effects of deforestation.</li>
+                            <li><strong>Lung of Tirana:</strong> The Dajti Mountain National Park, near Tirana, is often called the "Lung of Tirana" for its vast forests that provide clean air and recreational space for the city’s residents.</li>
+                            <li><strong>Deforestation Rates:</strong> Tirana's surrounding areas have experienced deforestation at a rate of about 1.32 kha per year due to various factors, including agriculture and urban expansion.</li>
+                            <li><strong>Urban Greening Movement:</strong> In the past few years, Tirana has been heavily involved in urban greening efforts, such as planting trees in urban spaces to combat the "urban heat island" effect caused by city expansion.</li>
+                            <li><strong>Satellite Monitoring:</strong> Organizations like Global Forest Watch use satellite technology to monitor tree loss around Tirana, helping local authorities respond quickly to illegal logging and deforestation activities.</li>
+                            <li><strong>Forest Gains:</strong> While deforestation is a concern, Tirana has also seen 920 hectares of forest gain in recent years due to forest recovery projects.</li>
+                            <li><strong>Disturbed Forests: </strong> About 2.07 kha of Tirana's forests are considered "disturbed," meaning that while they are still forested, they are impacted by human activities like selective logging or nearby developments.</li>
+                            <li><strong>Climate Change and Forests:</strong> Tirana's forests play a critical role in climate change mitigation. The city's reforestation efforts are seen as essential to absorbing CO2 and improving air quality for future generations.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row for Photography Gallery -->
+        <div class="row">
+            <div class="col-lg-12 wrap text-left">
+                <div class="about-desc">
+                    <div class="pt-5">
+                        <h2 class="mb-5">If we let this continue to happen...</h2>
+                        <p>This is how our beautiful Earth is going to look like in a couple of years</p>
+                        <div class="row">
+                            <!-- Gallery Item 1 -->
+                            <div class="col-md-4 mb-4">
+                                <div class="card">
+                                    <img src="../img/1.png" class="card-img-top" alt="Photography 1">
+                                </div>
+                            </div>
+                            <!-- Gallery Item 2 -->
+                            <div class="col-md-4 mb-4">
+                                <div class="card">
+                                    <img src="../img/2.png" class="card-img-top" alt="Photography 2">
+                                </div>
+                            </div>
+                            <!-- Gallery Item 3 -->
+                            <div class="col-md-4 mb-4">
+                                <div class="card">
+                                    <img src="../img/3.jpg" class="card-img-top" alt="Photography 3">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section>
+        <h1 class="display-4 mt-5">Wanna know more?</h1>
+        <h1 class="bold-text bg-text">Contact Us</h1>
+        <div class="text-left">
+            <div class="pt-5">
+                <h2 class="mb-5">If you want to learn more about this
+                    <br />
+                    Send us a message!
+                </h2>
+                <ul class="social-links list-unstyled mt-4">
+                    <li><a href="mailto:anisafrasheri9@gmail.com">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </a></li>
+                    <li><a href="https://github.com/anisafrasheri">
+                        <ion-icon name="logo-github"></ion-icon>
+                    </a></li>
+                    <li><a href="https://www.linkedin.com/in/anisa-frasheri-b51709225/">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                    </a></li>
+                    <li><a href="https://www.threads.net/@anisafrasherii">
+                        <ion-icon name="at-circle-outline"></ion-icon>
+                    </a></li>
+                    <li><a href="https://www.instagram.com/anisafrasherii">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a></li>
+                    <li><a href="https://vs.co/bxz3brkf">
+                        <ion-icon name="nuclear-outline"></ion-icon>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="mt-5 mb-5 text-center">
+        </div>
+    </section>
+</div>
+
+<!-- Scripts -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+</script>
+<script src="./main.js"></script>
+<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
+<script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=60586ee6b54d92a3bcaebe89"
+        type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous">
+</script>
+<script src="https://assets.website-files.com/60586ee6b54d92a3bcaebe89/js/webflow.aaa586350.js"
+        type="text/javascript"></script>
+<!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+
+</body>
+
+</html>
