@@ -3,6 +3,7 @@
 ## Overview
 
 Welcome to the **TiranaGoesGreen**, an Urban Reforestation and Sustainable Transportation Platform! This project leverages space technologies and data from the Copernicus Sentinel-2 satellite to enhance urban reforestation and promote sustainable transportation. By identifying areas with reduced vegetation and encouraging the use of bicycles, we aim to reduce carbon emissions and foster a greener urban environment.
+
 🏅Proudly awarded third place in the 7th CASSINI Hackathon in Albania.
 
 ## Features
